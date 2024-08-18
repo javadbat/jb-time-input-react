@@ -86,9 +86,6 @@ const JBTimeInput = React.forwardRef((props:JBTimeInputProps, ref)=>{
     element.current.value = value;
   }, [props.value]);
   useEffect(()=>{
-    element.current?.setAttribute('direction',props.direction);
-  },[props.direction]);
-  useEffect(()=>{
     if(Array.isArray( props.validationList) && element.current){
       element.current.validation.list = props.validationList;
     }
@@ -142,18 +139,16 @@ export type JBTimeInputProps = {
   onEnter?: (e: JBTimeInputEventType<KeyboardEvent>) => void,
   onInput?: (e: JBTimeInputEventType<InputEvent>) => void,
   onBeforeInput?: (e: JBTimeInputEventType<InputEvent>) => void,
-  onFocus:(e: JBTimeInputEventType<FocusEvent>) => void
-  onBlur:(e: JBTimeInputEventType<FocusEvent>) => void
-  className: string,
-  placeholder: string,
-  message:string
-  //TODO: remove this and handle internally
-  direction: 'ltr' | 'rtl',
-  validationList: ValidationItem<JBTimeInputValidationValue>[],
-  secondEnabled: boolean,
-  frontalZero: boolean,
-  optionalUnits: TimeUnits[],
-  showPersianNumber:true
+  onFocus?:(e: JBTimeInputEventType<FocusEvent>) => void,
+  onBlur?:(e: JBTimeInputEventType<FocusEvent>) => void,
+  className?: string | null,
+  placeholder?: string | null,
+  message?:string | null,
+  validationList?: ValidationItem<JBTimeInputValidationValue>[] | null,
+  secondEnabled?: boolean,
+  frontalZero?: boolean,
+  optionalUnits?: TimeUnits[] | null,
+  showPersianNumber?:boolean,
 }
 export {JBTimeInput};
 
