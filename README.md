@@ -15,7 +15,7 @@ in jb-time-input you can create a input special for time the advantage is:
 - support persian number char
 - responsive and mobile friendly
 
-sample: <https://codepen.io/javadbat/pen/QWdxzKb>
+ Demo: [codeSandbox preview](https://3f63dj.csb.app/samples/jb-time-input) for just see the demo and [codeSandbox editor](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBTimeInput.tsx) if you want to see and play with code
 
 ## instruction
 
@@ -66,7 +66,7 @@ to set value of time input you have 2 way:
 - by component as a prop:
 
 ```html
-<JBTimeInput value="14:34:63" />
+<JBTimeInput value="14:34:13" />
 ```
 
 
@@ -150,7 +150,7 @@ if you want picker to show `02` instead of `2` when number is less than 10 just 
 if you want to tell user some units is optional and make it less visible by set light grey color the numbers in picker you can set `optionalUnits`
 ```jsx
 //it could be 'hour' or 'minute' or 'second'
-<JBTimeInput optionalUnits={[hour]}></JBTimeInput>
+<JBTimeInput optionalUnits={["hour"]}></JBTimeInput>
 
 ```
 ### show persian number

@@ -69,12 +69,12 @@ const JBTimeInput = React.forwardRef((props:JBTimeInputProps, ref)=>{
     }
   }
   function onFocus(e:JBTimeInputEventType<FocusEvent>) {
-    if (props.onFocus && e instanceof FocusEvent) {
+    if (typeof props.onBlur == "function"&& e instanceof FocusEvent) {
       props.onFocus(e);
     }
   }
   function onBlur(e:JBTimeInputEventType<FocusEvent>) {
-    if (props.onBlur && e instanceof FocusEvent) {
+    if (typeof props.onBlur == "function" && e instanceof FocusEvent) {
       props.onBlur(e);
     }
   }
@@ -127,7 +127,7 @@ const JBTimeInput = React.forwardRef((props:JBTimeInputProps, ref)=>{
 export type JBTimeInputEventType<T> = T & {
   target: JBTimeInputWebComponent
 }
-
+JBTimeInput.displayName = "JBTimeInput";
 export type JBTimeInputProps = {
   label?: string | null,
   closeButtonText?: string | null,
