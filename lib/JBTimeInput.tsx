@@ -3,8 +3,8 @@ import 'jb-time-input';
 // eslint-disable-next-line no-duplicate-imports
 import {JBTimeInputWebComponent} from 'jb-time-input';
 import {useEvent} from '../../../common/hooks/use-event.js';
-import { type ValidationItem } from 'jb-validation/types';
-import { type JBTimeInputValidationValue, type TimeUnits } from 'jb-time-input/types';
+import { type ValidationItem } from 'jb-validation/types.js';
+import { type JBTimeInputValidationValue, type TimeUnits } from 'jb-time-input/types.js';
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
