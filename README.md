@@ -3,6 +3,10 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://raw.githubusercontent.com/javadbat/jb-time-input-react/master/LICENSE)
 [![NPM Downloads](https://img.shields.io/npm/dw/jb-time-input-react)](https://www.npmjs.com/package/jb-time-input-react)
 
+> [!WARNING]  
+> this package is deprecated and moved to [jb-time-input/react](https://github.com/javadbat/jb-time-input/tree/main/react)
+
+
 in jb-time-input you can create a input special for time the advantage is:
 
 - validation so it only accept time value and not any other invalid format
